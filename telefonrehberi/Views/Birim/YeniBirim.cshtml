@@ -1,0 +1,26 @@
+﻿@model telefonrehberi.Models.Birim;
+@{
+    ViewData["Title"] = "YeniBirim";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+
+<form class="form-group" method="post">
+
+    <b>Birim Adı</b>
+    <br />
+    @Html.TextBoxFor(x => x.BirimAdi, new { @class = "form-control" })
+
+    <br />
+
+    <b>Birim Yöneticisi</b>
+    <br />
+    @Html.TextBoxFor(x => x.BirimYoneticisi, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-info">Birim ekle</button>
+</form>
+
+
+

@@ -1,0 +1,41 @@
+﻿@using telefonrehberi.Models
+@model List<personel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Tc</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Telefon</th>
+        <th>Adres</th>
+        <th>Birim</th>
+        <th>Görev</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.perid</td>
+    <td>@x.Tc</td>
+    <td>@x.ad</td>
+    <td>@x.soyad</td>
+    <td>@x.telefon</td>
+    <td>@x.Adres</td>
+    <td>@x.CalistigiBirim</td>
+    <td>@x.Gorev</td>
+    <td><a href="/Personel/PersonelSil/@x.perid" class="btn btn-danger">SİL</a></td>
+    <td><a href="/Personel/PersonelGetir/@x.perid" class="btn btn-success">GÜNCELLE</a></td>
+    <td><a href="#" class="btn btn-default" style="background-color:#ffd800">DETAYLAR</a></td>
+</tr>
+    }
+</table>
+<a href="/Personel/YeniPersonel/" class="btn btn-primary">Yeni Personel</a>

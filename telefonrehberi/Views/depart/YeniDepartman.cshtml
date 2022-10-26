@@ -1,0 +1,21 @@
+﻿@model telefonrehberi.Models.departmanlar;
+@{
+    ViewData["Title"] = "YeniDepartman";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+
+
+<form class="form-group" method="post">
+
+    <b>Departman Adı</b>
+    <br/>
+    @Html.TextBoxFor(x => x.departmanad, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-info">Departman ekle</button>
+
+
+
+</form>
+

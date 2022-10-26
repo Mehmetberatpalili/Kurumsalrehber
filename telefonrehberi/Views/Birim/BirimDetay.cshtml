@@ -1,0 +1,34 @@
+﻿@using telefonrehberi.Models
+@model List<personel>
+@{
+    ViewData["Title"] = "BirimDetay";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<h2>@ViewBag.brm Departmanı </h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Tc</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Telefon</th>
+        <th>Adres</th>
+        <th>Birim</th>
+        <th>Görev</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.perid</td>
+            <td>@x.Tc</td>
+            <td>@x.ad</td>
+            <td>@x.soyad</td>
+            <td>@x.telefon</td>
+            <td>@x.Adres</td>
+            <td>@x.CalistigiBirim</td>
+            <td>@x.Gorev</td>
+        </tr>
+    }
+</table>

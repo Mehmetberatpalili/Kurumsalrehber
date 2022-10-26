@@ -1,0 +1,33 @@
+﻿@model telefonrehberi.Models.Birim
+@{
+    ViewData["Title"] = "BirimGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+
+<br />
+@using (Html.BeginForm("BirimGuncelle", "Birim", FormMethod.Post))
+{
+    <b>Birim ID</b>
+    <br />
+    @Html.TextBoxFor(x => x.BirimID, new { @class = "form-control" })
+
+    <br />
+
+    <b>Birim Adı</b>
+    <br />
+    @Html.TextBoxFor(x => x.BirimAdi, new { @class = "form-control" })
+
+    <br />
+    <b>Birim Yöneticisi</b>
+    <br />
+    @Html.TextBoxFor(x => x.BirimYoneticisi, new { @class = "form-control" })
+
+    <br />
+
+    <button class="btn btn-info">Birim Güncelle</button>
+
+}
+
+

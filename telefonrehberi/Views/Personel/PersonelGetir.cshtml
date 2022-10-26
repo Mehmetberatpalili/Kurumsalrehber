@@ -1,0 +1,44 @@
+﻿@model telefonrehberi.Models.personel
+@{
+    ViewData["Title"] = "PersonelGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<br />
+@using (Html.BeginForm("PersonelGuncelle", "Personel", FormMethod.Post))
+{
+    <b>Tc</b>
+    <br />
+    @Html.TextBoxFor(x => x.Tc, new { @class = "form-control" })
+    <br />
+
+    <b>Personel Ad</b>
+    <br />
+    @Html.TextBoxFor(x => x.ad, new { @class = "form-control" })
+    <br />
+    <b>Personel Soyad</b>
+    <br />
+    @Html.TextBoxFor(x => x.soyad, new { @class = "form-control" })
+    <br />
+    <b>Telefon</b>
+    <br />
+    @Html.TextBoxFor(x => x.telefon, new { @class = "form-control" })
+    <br />
+    <b>Adres</b>
+    <br />
+    @Html.TextBoxFor(x => x.Adres, new { @class = "form-control" })
+    <br />
+    <b>Birim</b>
+    <br />
+    @Html.TextBoxFor(x => x.CalistigiBirim, new { @class = "form-control" })
+    <br />
+    <b>Görev</b>
+    <br />
+    @Html.TextBoxFor(x => x.Gorev, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-info">Personel Güncelle</button>
+
+}
